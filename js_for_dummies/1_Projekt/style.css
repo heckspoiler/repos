@@ -1,0 +1,13 @@
+h2 {
+    color: red;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 10px;
+    lighting-color: aqua;
+}
+
+li {
+    list-style: none;
+    margin-top: 5px;
+    
+}
