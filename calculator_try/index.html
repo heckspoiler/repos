@@ -1,38 +1,74 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-    <meta charset="utf-8">
-    <title>Calculator</title>
-    <link href="styles.css" rel="stylesheet">
-    <script src=".script.jss" defer></script>
-
-    
-    <div class="calculator-grid">
-        <div class="output">
-            <div class="previous-operand"></div>
-            <div class="current-operand"></div>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">        
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <title>JavaScript Calculator</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="script.js"></script>
+ 
+        
+    </head>
+    <body>
+        <!-- A container is required for the default 
+        Bootstrap grid system -->
+        <!-- text-center centers text across the container -->
+        <div class="container text-center">
+ 
+            <!-- Will surround my whole calculator -->
+            <div class="calc-container">
+ 
+                <!-- row wraps columns they contain -->
+                <div class="row">
+                    <form name="calc">
+                    
+                    <!-- Change text align to the right -->
+                    <!-- I'll change this value by referring
+                    to the id -->
+                    <input type="text" id="entry" class="entry text-right" value="0" readonly>
+                    </form>
+                </div>
+ 
+                <!-- Organizing buttons in rows -->
+                <div class="row">
+ 
+                    <!-- I'll call different functions depending
+                    on which button is pressed -->
+                    <!-- I use default Bootstrap button types like
+                    btn-primary, btn-success, etc. -->
+                    <button id="numBut" type="button" class="btn btn-primary numBut" onclick="numButPress(7)">7</button>
+                    <button id="numBut" type="button" class="btn btn-primary numBut" onclick="numButPress(8)">8</button>
+                    <button id="numBut" type="button" class="btn btn-primary numBut" onclick="numButPress(9)">9</button>
+                    <button id="mathBut" type="button" class="btn btn-success mathBut" onclick="mathButPress('+')">+</button>
+                </div>
+                <div class="row">
+                    <button id="numBut" type="button" class="btn btn-primary numBut" onclick="numButPress(4)">4</button>
+                    <button id="numBut" type="button" class="btn btn-primary numBut" onclick="numButPress(5)">5</button>
+                    <button id="numBut" type="button" class="btn btn-primary numBut" onclick="numButPress(6)">6</button>
+                    <button id="mathBut" type="button" class="btn btn-success mathBut" onclick="mathButPress('-')">-</button>
+                </div>
+                <div class="row">
+                    <button id="numBut" type="button" class="btn btn-primary numBut" onclick="numButPress(1)">1</button>
+                    <button id="numBut" type="button" class="btn btn-primary numBut" onclick="numButPress(2)">2</button>
+                    <button id="numBut" type="button" class="btn btn-primary numBut" onclick="numButPress(3)">3</button>
+                    <button id="mathBut" type="button" class="btn btn-success mathBut" onclick="mathButPress('*')">*</button>
+                </div>
+                <div class="row">
+                    <button id="clearBut" type="button" class="btn btn-danger numBut" onclick="clearButPress()">AC</button>
+                    <button id="numBut" type="button" class="btn btn-primary numBut" onclick="numButPress(0)">0</button>
+                    <button id="decimalBut" type="button" class="btn btn-primary numBut" onclick="numButPress('.')">.</button>
+                    <button id="mathBut" type="button" class="btn btn-success mathBut" onclick="mathButPress('/')">/</button>
+                </div>
+                <div class="row">
+                    <button id="addMemBut" type="button" class="btn btn-warning numBut" onclick="copyButPress()">MC</button>
+                    <button id="numBut" type="button" class="btn btn-warning numBut" onclick="pasteButPress()">MP</button>
+                    <button id="decimalBut" type="button" class="btn btn-info equalBut" onclick="equalButPress()">=</button>
+                </div>
+            </div>
         </div>
-        <button class="span-two">AC</button>
-        <button>DEL</button>
-        <button>÷</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>*</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>+</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>-</button>
-        <button>.</button>
-        <button>0</button>
-        <button class="span-two">=</button>
-    </div>
-</head>
-<body>
-</body>
+ 
+        
+        
+    </body>
 </html>
