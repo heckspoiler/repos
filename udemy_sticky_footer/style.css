@@ -1,0 +1,52 @@
+:root {
+    font-size: 62.5%; /* is the same as 10px, remember that 100% font size is 16px */
+}
+
+header {
+    background-color: lightsteelblue;
+    height: 7.5rem;
+}
+
+section {
+    background-color: lightskyblue;
+    height: 30rem;
+}
+
+footer {
+    background-color: lightseagreen;
+    height: 8.5rem;
+}
+
+header,
+section,
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    color: white;
+}
+
+/* First solution */
+
+/* section {
+    height: calc(100vh - 7.5rem - 8.5rem)
+}*/ 
+
+/* reset */
+* {
+    padding: 0;
+    margin: 0;
+} /*this process is called a reset. This makes it possible that the webpage fills out the whole viewport*/
+
+/* Second solution ->recommended (this solution will make the main element take the remaining space dynamically)*/
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    flex-grow: 1;
+}

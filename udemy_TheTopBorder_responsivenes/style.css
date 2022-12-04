@@ -1,0 +1,23 @@
+header{
+    background-color: rgb(227, 232, 238);
+    padding: 5vh 5vw;
+
+    /* top border */
+
+    /*border-top: 5px solid lightslategray;/*
+    
+    /* making the border responsive => vw = [(Pixel value / Viewport Width) * 100]*/
+
+    /*border-top: 0.3333vw solid lightslategray;/*
+
+    /* taking it one step further => so id doesn't get very small on mobile devices */
+    border-top: calc(2px + 0.186vw) solid lightslategray;
+
+
+}
+
+a{
+    text-decoration: none;
+    color: #444;
+    margin: 0 2vw;
+}
